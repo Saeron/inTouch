@@ -1,0 +1,36 @@
+<form class="example-container" (ngSubmit)="onSubmit()" [formGroup]="myform">
+  <div class="mdc-select">
+    <i class="mdc-select__dropdown-icon"></i>
+    <select class="mdc-select__native-control">
+      <option *ngFor="let tipo of tipos" [ngValue]="tipo">
+        {{tipo}}
+      </option>
+    </select>
+
+    <div class="mdc-line-ripple"></div>
+  </div>
+
+  <mat-form-field>
+    <input matInput type="number" placeholder="Numero" formControlName="numero">
+  </mat-form-field>
+
+
+  <label>Repetir?</label>
+  <br>
+  <mat-radio-group matInput class="example-radio-group" formControlName="repetir">
+    <mat-radio-button  class="example-radio-button" value="Si">
+      Si
+    </mat-radio-button>
+    <mat-radio-button class="example-radio-button" value="No">
+      No
+    </mat-radio-button>
+  </mat-radio-group>
+  <br>
+  <mat-form-field>
+    <input matInput type="text" placeholder="Mensaje de alerta" formControlName="texto">
+  </mat-form-field>
+
+
+
+  <button mat-button type="submit">submit</button>
+</form>

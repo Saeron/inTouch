@@ -1,0 +1,18 @@
+<form class="example-container" (ngSubmit)="onSubmit()" [formGroup]="myform">
+  <mat-form-field>
+    <input matInput type="date" placeholder="Fecha" formControlName="fechafin">
+  </mat-form-field>
+
+  <label>Repetir?</label>
+  <br>
+  <mat-radio-group matInput class="example-radio-group" formControlName="repetir">
+    <mat-radio-button class="example-radio-button" value="Si">
+      Si
+    </mat-radio-button>
+    <mat-radio-button class="example-radio-button" value="No">
+      No
+    </mat-radio-button>
+  </mat-radio-group>
+
+  <button mat-button type="submit">submit</button>
+</form>

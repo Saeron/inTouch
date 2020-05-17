@@ -1,0 +1,19 @@
+.example-container {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10%;
+}
+  
+.example-container > * {
+    width: 80%;  
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  

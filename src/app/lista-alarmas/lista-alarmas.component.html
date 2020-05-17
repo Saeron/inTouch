@@ -1,0 +1,29 @@
+<ul class="mdc-list mdc-list--two-line">
+  <li *ngFor="let item of datos" class="mdc-list-item" tabindex="0">
+    <span class="mdc-list-item__text">
+      <span class="mdc-list-item__primary-text"> ID </span>
+      <span class="mdc-list-item__secondary-text"> {{item.id}} </span>
+    </span>
+    <span class="mdc-list-item__text">
+      <span class="mdc-list-item__primary-text"> Fecha Fin </span>
+      <span class="mdc-list-item__secondary-text"> {{item.fechafin}} </span>
+    </span>
+    <span class="mdc-list-item__text">
+      <span class="mdc-list-item__primary-text"> Nº Rep </span>
+      <span class="mdc-list-item__secondary-text"> {{item.repnum}} </span>
+    </span>
+    <span class="mdc-list-item__text">
+      <span class="mdc-list-item__primary-text"><i class="material-icons">
+          repeat
+        </i></span>
+      <span class="mdc-list-item__secondary-text"> {{item.repeDay}}</span>
+    </span>
+    <span class="mdc-list-item">
+      <button class="mdc-button" (click)="modificar(item)">
+        <i class="material-icons">
+          create
+        </i>
+      </button>
+    </span>
+  </li>
+</ul>

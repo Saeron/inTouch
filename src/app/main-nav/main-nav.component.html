@@ -1,0 +1,27 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport="false"
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="!(isHandset$ | async)">
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list>
+      <a *ngIf="logged()" mat-list-item routerLink="/listado">Clientes</a>
+      <a *ngIf="logged()" mat-list-item routerLink="/profile">Mi perfil</a>
+      <a *ngIf="logged()" mat-list-item routerLink="/logout">Logout</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>InTouch</span>
+      <span class="spacer"></span>
+      <a *ngIf="logged()" routerLink="/listado">Clientes</a>
+      <a *ngIf="logged()" routerLink="/profile">Mi perfil</a>
+      <a *ngIf="logged()" routerLink="/logout">Log out</a>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+    <!-- Add Content Here -->
+  </mat-sidenav-content>
+</mat-sidenav-container>

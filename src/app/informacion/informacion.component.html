@@ -1,0 +1,45 @@
+<div class="botonera">
+    <span class="spacer"></span>
+  <button class="mdc-button" style="float:right" (click)="listado()">
+    <i class="material-icons">
+      list
+    </i>
+  </button>
+  <button class="mdc-button" style="float:right" (click)="modificar()">
+    <i class="material-icons">
+      create
+    </i>
+  </button>
+  <button class="mdc-button" style="float:right" (click)="ponerAlarma()">
+    <i class="material-icons">
+      add_alert
+    </i></button>
+
+</div>
+
+<ul class="mdc-list mdc-list--two-line">
+  <li class="mdc-list-item" tabindex="0">
+    <span class="mdc-list-item__text">
+      <span class="mdc-list-item__primary-text">Nombre: </span>
+      <span class="mdc-list-item__secondary-text"> {{client?.nombre}}</span>
+    </span>
+  </li>
+  <li class="mdc-list-item" tabindex="0">
+    <span class="mdc-list-item__text">
+      <span class="mdc-list-item__primary-text"> Email: </span>
+      <span class="mdc-list-item__secondary-text"> {{client?.email}}</span>
+    </span>
+  </li>
+  <li class="mdc-list-item" tabindex="0">
+    <span class="mdc-list-item__text">
+      <span class="mdc-list-item__primary-text"> Telefono: </span>
+      <span class="mdc-list-item__secondary-text"> {{client?.telefono}} </span>
+    </span>
+  </li>
+  <li class="mdc-list-item" tabindex="0">
+    <span class="mdc-list-item__text">
+      <span class="mdc-list-item__primary-text"> Fecha de registro: </span>
+      <span class="mdc-list-item__secondary-text"> {{client?.fechaini}}</span>
+    </span>
+  </li>
+</ul>

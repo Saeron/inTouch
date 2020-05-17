@@ -1,0 +1,34 @@
+<ul class="mdc-list">
+  <li class="mdc-list-item" tabindex="0">
+    <span class="mdc-list-item">
+      <h3>Nombre</h3>
+    </span>
+    <span class="mdc-list-item">
+      <h3>Telefono</h3>
+    </span>
+    <span class="spacer"></span>
+    <span class="mdc-list-item"><button class="mdc-button" style="float:right" (click)="registro()"><i
+          class="material-icons">
+          add
+        </i></button></span>
+  </li>
+  <li *ngFor="let item of datos" class="mdc-list-item" tabindex="0">
+    <span class="mdc-list-item">{{item.nombre}}</span>
+    <div class="spacer1">
+      <span class="mat-nav-list"><a class="mat-list-item" href="tel{{item.telefono}}">{{item.telefono}}</a></span>
+    </div>
+    <span class="spacer"></span>
+    <span class="mat-icon-button"><button *ngIf="alarm(item.telefono)" class="mdc-button" (click)="listaAlarmas(item)">
+        <i class="fas fa-exclamation"></i>
+      </button></span>
+    <span class="mat-icon-button"><button class="mdc-button" (click)="borrar(item)">
+        <i class="fas fa-trash"></i>
+      </button></span>
+    <span class="mat-icon-button"><a href="mailto:{{item.email}}" target="_blank" id="mail">
+        <i class="far fa-envelope"></i>
+      </a></span>
+    <span class="mat-icon-button"><button class="mdc-button" (click)="informacion(item)">
+        <i class="fas fa-info-circle"></i>
+      </button></span>
+  </li>
+</ul>

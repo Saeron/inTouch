@@ -1,0 +1,18 @@
+<form class="example-container" (ngSubmit)="onSubmit()" [formGroup]="myform">
+  
+  <h1>Hola {{user?.username}}</h1>
+  <h3>Modifica tus datos</h3>
+  <mat-form-field>
+    <input matInput placeholder="Nombre" formControlName="nombre" required>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput type="email" placeholder="Direccion de email" formControlName="email" required>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput type="password" placeholder="Password" formControlName="password" required>
+  </mat-form-field>
+
+  <button mat-button type="submit">submit</button>
+</form>
